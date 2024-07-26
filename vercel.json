@@ -1,19 +1,20 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "api/inference.py",
-            "use": "@vercel/python"
-        },
-        {
-            "src": "package.json",
-            "use": "@vercel/next"
-        }
+      {
+        "src": "api/inference.py",
+        "use": "@vercel/python"
+      },
+      {
+        "src": "package.json",
+        "use": "@vercel/next"
+      }
     ],
     "routes": [
-        {
-            "src": "/api/inference",
-            "dest": "/api/inference.py"
-        }
+      {
+        "src": "/api/inference",
+        "dest": "/api/inference.py"
+      }
     ]
-}
+  }
+  

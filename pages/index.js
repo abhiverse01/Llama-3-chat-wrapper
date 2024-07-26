@@ -1,16 +1,17 @@
-import { useState } from "react";
-import "../public/styles/main.css";
+import { useState } from 'react';
+// Remove the CSS import here
+// import '../public/styles/main.css';
 
 export default function Home() {
-    const [input, setInput] = useState("");
-    const [response, setResponse] = useState("");
+    const [input, setInput] = useState('');
+    const [response, setResponse] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await fetch("/api/inference", {
-            method: "POST",
+        const res = await fetch('/api/inference', {
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({ inputs: input }),
         });
