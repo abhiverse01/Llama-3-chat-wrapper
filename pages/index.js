@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { FaCog, FaBell, FaSun, FaMoon, FaArrowLeft, FaArrowRight } from 'react-icons/fa';  // Using different icons for testing
 
 export default function Home() {
