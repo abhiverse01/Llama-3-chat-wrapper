@@ -7,6 +7,8 @@ headers = {"Authorization": f"Bearer {os.getenv('HUGGINGFACE_API_TOKEN')}"}
 
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
+    response.raise_for_status()
+    print(response.json())  # Log the response for debugging
     return response.json()
 
 def handler(request):
