@@ -13,8 +13,7 @@
       "next": "latest",
       "react": "latest",
       "react-dom": "latest",
-      "react-icons": "^4.2.0",
-      "@huggingface/inference": "^0.0.7"
+      "react-icons": "^4.2.0"
     },
     "devDependencies": {
       "sass": "^1.32.8"

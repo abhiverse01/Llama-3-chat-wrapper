@@ -24,7 +24,7 @@ export default function Home() {
             }
             const data = await res.json();
             console.log('Received response:', data);
-            setResponse([...response, { user: input, bot: data }]);
+            setResponse([...response, { user: input, bot: data.response }]);
             setInput('');
         } catch (error) {
             console.error('Error calling API:', error);
@@ -51,7 +51,9 @@ export default function Home() {
             </div>
             <div className="main-chat">
                 <header className="chat-header">
-                    <h1><img src="/path/to/logo.png" alt="Logo" />LamChat</h1>
+                    <h1>
+                        <img src={darkMode ? "/night.png" : "/day.png"} alt="Logo" />LamChat
+                    </h1>
                     <div className="icons">
                         <FaCog className="icon-settings" />
                         <FaBell className="icon-notifications" />
@@ -63,7 +65,7 @@ export default function Home() {
                             {response.map((res, index) => (
                                 <div key={index} className="chat-message">
                                     <p><strong>You:</strong> {res.user}</p>
-                                    <p><strong>Bot:</strong> {res.bot}</p>
+                                    <p><strong>Bot:</strong> {typeof res.bot === 'string' ? res.bot : JSON.stringify(res.bot)}</p>
                                 </div>
                             ))}
                         </div>
