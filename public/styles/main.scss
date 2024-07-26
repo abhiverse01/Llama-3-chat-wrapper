@@ -12,6 +12,7 @@ $dark-secondary-color: #4a90e2;
 $border-radius: 8px;
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 $transition-time: 0.3s;
+$icon-size: 24px;
 
 // Reset and base styles
 * {
@@ -118,13 +119,17 @@ body.dark-mode {
 
     .side-panel-content {
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         h2 {
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
 
-        .collapse-button {
+        .collapse-button,
+        .dark-mode-toggle {
             background: $secondary-color;
             color: #fff;
             border: none;
@@ -132,10 +137,15 @@ body.dark-mode {
             border-radius: $border-radius;
             cursor: pointer;
             transition: transform $transition-time ease, background-color $transition-time;
+            margin-top: 10px;
 
             &:hover {
                 background-color: darken($secondary-color, 10%);
             }
+        }
+
+        .dark-mode-toggle {
+            background: $secondary-color;
         }
     }
 }
@@ -157,6 +167,14 @@ body.dark-mode {
 
         h1 {
             font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
         }
 
         .icons {
@@ -164,7 +182,7 @@ body.dark-mode {
 
             .icon-settings,
             .icon-notifications {
-                font-size: 1.5rem;
+                font-size: $icon-size;
                 margin-left: 15px;
                 cursor: pointer;
                 transition: color $transition-time;

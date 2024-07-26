@@ -86,12 +86,16 @@ body.dark-mode {
 }
 .side-panel .side-panel-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .side-panel .side-panel-content h2 {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
-.side-panel .side-panel-content .collapse-button {
+.side-panel .side-panel-content .collapse-button,
+.side-panel .side-panel-content .dark-mode-toggle {
   background: #007bff;
   color: #fff;
   border: none;
@@ -99,9 +103,14 @@ body.dark-mode {
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s;
+  margin-top: 10px;
 }
-.side-panel .side-panel-content .collapse-button:hover {
+.side-panel .side-panel-content .collapse-button:hover,
+.side-panel .side-panel-content .dark-mode-toggle:hover {
   background-color: #0062cc;
+}
+.side-panel .side-panel-content .dark-mode-toggle {
+  background: #007bff;
 }
 
 .main-chat {
@@ -120,13 +129,20 @@ body.dark-mode {
 }
 .main-chat .chat-header h1 {
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.main-chat .chat-header h1 img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 .main-chat .chat-header .icons {
   display: flex;
 }
 .main-chat .chat-header .icons .icon-settings,
 .main-chat .chat-header .icons .icon-notifications {
-  font-size: 1.5rem;
+  font-size: 24px;
   margin-left: 15px;
   cursor: pointer;
   transition: color 0.3s;

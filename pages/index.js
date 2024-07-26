@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaCog, FaBell } from 'react-icons/fa';
+import { FaCog, FaBell, FaSun, FaMoon } from 'react-icons/fa';
 
 export default function Home() {
     const [input, setInput] = useState('');
@@ -31,15 +31,17 @@ export default function Home() {
             <div className="side-panel">
                 <div className="side-panel-content">
                     <h2>Navigation</h2>
-                    <button className="collapse-button" onClick={() => setIsCollapsed(!isCollapsed)}>Collapse</button>
+                    <button className="collapse-button" onClick={() => setIsCollapsed(!isCollapsed)}>
+                        {isCollapsed ? <FaChevronRight /> : <FaChevronLeft />}
+                    </button>
                     <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-                        {darkMode ? 'Light Mode' : 'Dark Mode'}
+                        {darkMode ? <FaSun /> : <FaMoon />}
                     </button>
                 </div>
             </div>
             <div className="main-chat">
                 <header className="chat-header">
-                    <h1>Chatbot</h1>
+                    <h1><img src="/path/to/logo.png" alt="Logo" /> Chatbot</h1>
                     <div className="icons">
                         <FaCog className="icon-settings" />
                         <FaBell className="icon-notifications" />
