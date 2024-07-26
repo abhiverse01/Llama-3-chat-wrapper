@@ -30,9 +30,8 @@ body {
 // Chat wrapper
 .chat-wrapper {
     display: flex;
-    width: 100%;
-    max-width: 1200px;
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
     background: #fff;
     box-shadow: $box-shadow;
     border-radius: $border-radius;
@@ -129,6 +128,7 @@ body {
             box-shadow: $box-shadow;
             background: #fff;
             padding: 20px;
+            overflow: hidden;
 
             .chat-response {
                 flex: 1;

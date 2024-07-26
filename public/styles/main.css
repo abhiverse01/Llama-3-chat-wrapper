@@ -18,9 +18,8 @@ body {
 
 .chat-wrapper {
   display: flex;
-  width: 100%;
-  max-width: 1200px;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   background: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -106,6 +105,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background: #fff;
   padding: 20px;
+  overflow: hidden;
 }
 .main-chat .chat-container .chat-box .chat-response {
   flex: 1;
