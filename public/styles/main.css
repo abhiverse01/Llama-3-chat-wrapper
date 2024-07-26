@@ -14,6 +14,12 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #f4f4f9;
 }
 
 .chat-wrapper {
@@ -32,6 +38,42 @@ body {
 .chat-wrapper.collapsed .side-panel .collapse-button {
   transform: rotate(180deg);
 }
+.chat-wrapper.dark-mode {
+  background: #333;
+}
+.chat-wrapper.dark-mode .side-panel {
+  background: #444;
+  color: #f4f4f9;
+}
+.chat-wrapper.dark-mode .side-panel .collapse-button {
+  background: #4a90e2;
+}
+.chat-wrapper.dark-mode .main-chat .chat-header {
+  background: #333;
+  border-bottom: 1px solid #555;
+}
+.chat-wrapper.dark-mode .main-chat .chat-header .icons .icon-settings,
+.chat-wrapper.dark-mode .main-chat .chat-header .icons .icon-notifications {
+  color: #f4f4f9;
+}
+.chat-wrapper.dark-mode .main-chat .chat-container {
+  background: #333;
+}
+.chat-wrapper.dark-mode .main-chat .chat-container .chat-box {
+  background: #555;
+  box-shadow: none;
+}
+.chat-wrapper.dark-mode .main-chat .chat-container .chat-box .chat-response {
+  background: #444;
+}
+.chat-wrapper.dark-mode .main-chat .chat-container .chat-box .chat-form textarea {
+  background: #666;
+  border: 1px solid #777;
+  color: #f4f4f9;
+}
+.chat-wrapper.dark-mode .main-chat .chat-container .chat-box .chat-form button {
+  background-color: #4a90e2;
+}
 
 .side-panel {
   width: 250px;
@@ -40,7 +82,7 @@ body {
   flex-direction: column;
   padding: 20px;
   border-right: 1px solid #ddd;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease, background-color 0.3s, color 0.3s;
 }
 .side-panel .side-panel-content {
   flex: 1;
@@ -56,7 +98,10 @@ body {
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+.side-panel .side-panel-content .collapse-button:hover {
+  background-color: #0062cc;
 }
 
 .main-chat {
@@ -71,6 +116,7 @@ body {
   padding: 10px 20px;
   background: #fff;
   border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s, border-bottom 0.3s;
 }
 .main-chat .chat-header h1 {
   font-size: 1.5rem;
@@ -83,7 +129,7 @@ body {
   font-size: 1.5rem;
   margin-left: 15px;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 .main-chat .chat-header .icons .icon-settings:hover,
 .main-chat .chat-header .icons .icon-notifications:hover {
@@ -95,6 +141,7 @@ body {
   flex-direction: column;
   padding: 20px;
   background: #f4f4f9;
+  transition: background-color 0.3s;
 }
 .main-chat .chat-container .chat-box {
   flex: 1;
@@ -106,6 +153,7 @@ body {
   background: #fff;
   padding: 20px;
   overflow: hidden;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 .main-chat .chat-container .chat-box .chat-response {
   flex: 1;
@@ -113,6 +161,7 @@ body {
   padding: 10px;
   background: #f4f4f9;
   border-radius: 8px;
+  transition: background-color 0.3s;
 }
 .main-chat .chat-container .chat-box .chat-response p {
   margin-bottom: 10px;
@@ -130,6 +179,7 @@ body {
   font-family: "Roboto", sans-serif;
   resize: none;
   margin-right: 10px;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 .main-chat .chat-container .chat-box .chat-form button {
   padding: 10px 20px;
@@ -139,7 +189,7 @@ body {
   color: white;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 .main-chat .chat-container .chat-box .chat-form button:hover {
   background-color: #0062cc;

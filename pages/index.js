@@ -5,6 +5,7 @@ export default function Home() {
     const [input, setInput] = useState('');
     const [response, setResponse] = useState([]);
     const [isCollapsed, setIsCollapsed] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,12 +21,20 @@ export default function Home() {
         setInput('');
     };
 
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode);
+        document.body.classList.toggle('dark-mode', !darkMode);
+    };
+
     return (
-        <div className={`chat-wrapper ${isCollapsed ? 'collapsed' : ''}`}>
+        <div className={`chat-wrapper ${isCollapsed ? 'collapsed' : ''} ${darkMode ? 'dark-mode' : ''}`}>
             <div className="side-panel">
                 <div className="side-panel-content">
                     <h2>Navigation</h2>
                     <button className="collapse-button" onClick={() => setIsCollapsed(!isCollapsed)}>Collapse</button>
+                    <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+                        {darkMode ? 'Light Mode' : 'Dark Mode'}
+                    </button>
                 </div>
             </div>
             <div className="main-chat">
