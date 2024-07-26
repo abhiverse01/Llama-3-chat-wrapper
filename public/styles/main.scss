@@ -12,7 +12,10 @@ $dark-secondary-color: #4a90e2;
 $border-radius: 8px;
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 $transition-time: 0.3s;
-$icon-size: 24px;
+$icon-size: 20px;
+$header-font-size: 1.2rem;
+$button-font-size: 0.9rem;
+$input-font-size: 0.9rem;
 
 // Reset and base styles
 * {
@@ -124,7 +127,7 @@ body.dark-mode {
         align-items: center;
 
         h2 {
-            font-size: 1.2rem;
+            font-size: $header-font-size;
             margin-bottom: 20px;
         }
 
@@ -166,24 +169,25 @@ body.dark-mode {
         transition: background-color $transition-time, border-bottom $transition-time;
 
         h1 {
-            font-size: 1.5rem;
+            font-size: $header-font-size;
             display: flex;
             align-items: center;
 
             img {
-                width: 40px;
-                height: 40px;
+                width: 32px;
+                height: 32px;
                 margin-right: 10px;
             }
         }
 
         .icons {
             display: flex;
+            align-items: center;
 
             .icon-settings,
             .icon-notifications {
                 font-size: $icon-size;
-                margin-left: 15px;
+                margin-left: 10px;
                 cursor: pointer;
                 transition: color $transition-time;
 
@@ -198,7 +202,7 @@ body.dark-mode {
         flex: 1;
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding: 15px;
         background: $background-color;
         transition: background-color $transition-time;
 
@@ -210,7 +214,7 @@ body.dark-mode {
             border-radius: $border-radius;
             box-shadow: $box-shadow;
             background: #fff;
-            padding: 20px;
+            padding: 15px;
             overflow: hidden;
             transition: background-color $transition-time, box-shadow $transition-time;
 
@@ -223,7 +227,7 @@ body.dark-mode {
                 transition: background-color $transition-time;
 
                 p {
-                    margin-bottom: 10px;
+                    margin-bottom: 8px;
                 }
             }
 
@@ -234,23 +238,25 @@ body.dark-mode {
 
                 textarea {
                     flex: 1;
-                    padding: 10px;
+                    padding: 8px;
                     border-radius: $border-radius;
                     border: 1px solid #ccc;
                     font-family: $font-stack;
+                    font-size: $input-font-size;
                     resize: none;
                     margin-right: 10px;
                     transition: background-color $transition-time, border $transition-time, color $transition-time;
                 }
 
                 button {
-                    padding: 10px 20px;
+                    padding: 8px 15px;
                     border: none;
                     border-radius: $border-radius;
                     background-color: $secondary-color;
                     color: white;
                     cursor: pointer;
                     font-family: $font-stack;
+                    font-size: $button-font-size;
                     transition: background-color $transition-time;
 
                     &:hover {

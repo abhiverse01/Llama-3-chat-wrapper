@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaCog, FaBell, FaSun, FaMoon, FaArrowLeft, FaArrowRight } from 'react-icons/fa';  // Using different icons for testing
+import { FaCog, FaBell, FaSun, FaMoon, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 export default function Home() {
     const [input, setInput] = useState('');
@@ -41,7 +41,7 @@ export default function Home() {
             </div>
             <div className="main-chat">
                 <header className="chat-header">
-                    <h1><img src="/path/to/logo.png" alt="Logo" />Llama3-Chat</h1>
+                    <h1><img src="/path/to/logo.png" alt="Logo" /> Chatbot</h1>
                     <div className="icons">
                         <FaCog className="icon-settings" />
                         <FaBell className="icon-notifications" />
@@ -51,7 +51,7 @@ export default function Home() {
                     <div className="chat-box">
                         <div className="chat-response">
                             {response.map((res, index) => (
-                                <div key={index}>
+                                <div key={index} className="chat-message">
                                     <p><strong>You:</strong> {res.user}</p>
                                     <p><strong>Bot:</strong> {res.bot}</p>
                                 </div>

@@ -128,22 +128,23 @@ body.dark-mode {
   transition: background-color 0.3s, border-bottom 0.3s;
 }
 .main-chat .chat-header h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
 }
 .main-chat .chat-header h1 img {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   margin-right: 10px;
 }
 .main-chat .chat-header .icons {
   display: flex;
+  align-items: center;
 }
 .main-chat .chat-header .icons .icon-settings,
 .main-chat .chat-header .icons .icon-notifications {
-  font-size: 24px;
-  margin-left: 15px;
+  font-size: 20px;
+  margin-left: 10px;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -155,7 +156,7 @@ body.dark-mode {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 15px;
   background: #f4f4f9;
   transition: background-color 0.3s;
 }
@@ -167,7 +168,7 @@ body.dark-mode {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background: #fff;
-  padding: 20px;
+  padding: 15px;
   overflow: hidden;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
@@ -180,7 +181,7 @@ body.dark-mode {
   transition: background-color 0.3s;
 }
 .main-chat .chat-container .chat-box .chat-response p {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .main-chat .chat-container .chat-box .chat-form {
   display: flex;
@@ -189,22 +190,24 @@ body.dark-mode {
 }
 .main-chat .chat-container .chat-box .chat-form textarea {
   flex: 1;
-  padding: 10px;
+  padding: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
   resize: none;
   margin-right: 10px;
   transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 .main-chat .chat-container .chat-box .chat-form button {
-  padding: 10px 20px;
+  padding: 8px 15px;
   border: none;
   border-radius: 8px;
   background-color: #007bff;
   color: white;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
   transition: background-color 0.3s;
 }
 .main-chat .chat-container .chat-box .chat-form button:hover {
