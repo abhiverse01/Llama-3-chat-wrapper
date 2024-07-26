@@ -11,7 +11,7 @@ export default function Home() {
         e.preventDefault();
         console.log('Sending request to API...');
         try {
-            const res = await fetch('YOUR_API_ENDPOINT_URL', {  // Replace with your actual API endpoint
+            const res = await fetch('/api/inference', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ export default function Home() {
             </div>
             <div className="main-chat">
                 <header className="chat-header">
-                    <h1><img src="/path/to/logo.png" alt="Logo" /> Chatbot</h1>
+                    <h1><img src="/path/to/logo.png" alt="Logo" />LamChat</h1>
                     <div className="icons">
                         <FaCog className="icon-settings" />
                         <FaBell className="icon-notifications" />

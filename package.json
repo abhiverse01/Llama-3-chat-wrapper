@@ -1,19 +1,23 @@
 {
-    "name": "llama-3-chat-wrapper",
+    "name": "llama-chat",
     "version": "1.0.0",
     "scripts": {
-        "sass": "sass public/styles/main.scss public/styles/main.css",
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start"
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint",
+      "sass": "sass public/styles/main.scss public/styles/main.css"
     },
     "dependencies": {
-        "next": "latest",
-        "react": "latest",
-        "react-dom": "latest",
-        "react-icons": "^5.2.1"
+      "axios": "^0.21.1",
+      "next": "latest",
+      "react": "latest",
+      "react-dom": "latest",
+      "react-icons": "^4.2.0",
+      "@huggingface/inference": "^0.0.7"
     },
     "devDependencies": {
-        "sass": "^1.32.8"
+      "sass": "^1.32.8"
     }
-}
+  }
+  
