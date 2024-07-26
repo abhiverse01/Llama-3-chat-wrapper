@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { FaCog, FaBell, FaSun, FaMoon, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaCog, FaBell, FaSun, FaMoon, FaArrowLeft, FaArrowRight } from 'react-icons/fa';  // Using different icons for testing
 
 export default function Home() {
     const [input, setInput] = useState('');
@@ -32,7 +31,7 @@ export default function Home() {
                 <div className="side-panel-content">
                     <h2>Navigation</h2>
                     <button className="collapse-button" onClick={() => setIsCollapsed(!isCollapsed)}>
-                        {isCollapsed ? <FaChevronRight /> : <FaChevronLeft />}
+                        {isCollapsed ? <FaArrowRight /> : <FaArrowLeft />}
                     </button>
                     <button className="dark-mode-toggle" onClick={toggleDarkMode}>
                         {darkMode ? <FaSun /> : <FaMoon />}
