@@ -226,8 +226,17 @@ body.dark-mode {
                 border-radius: $border-radius;
                 transition: background-color $transition-time;
 
+                .chat-message {
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border-radius: $border-radius;
+                    background-color: #fff;
+                    box-shadow: $box-shadow;
+                }
+
                 p {
                     margin-bottom: 8px;
+                    font-size: $input-font-size;
                 }
             }
 

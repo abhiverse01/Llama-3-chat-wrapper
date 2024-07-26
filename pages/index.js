@@ -41,7 +41,7 @@ export default function Home() {
             </div>
             <div className="main-chat">
                 <header className="chat-header">
-                    <h1><img src="/path/to/logo.png" alt="Logo" /> Chatbot</h1>
+                    <h1><img src="/path/to/logo.png" alt="Logo" />Llama3-chat</h1>
                     <div className="icons">
                         <FaCog className="icon-settings" />
                         <FaBell className="icon-notifications" />

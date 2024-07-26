@@ -180,8 +180,16 @@ body.dark-mode {
   border-radius: 8px;
   transition: background-color 0.3s;
 }
+.main-chat .chat-container .chat-box .chat-response .chat-message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 .main-chat .chat-container .chat-box .chat-response p {
   margin-bottom: 8px;
+  font-size: 0.9rem;
 }
 .main-chat .chat-container .chat-box .chat-form {
   display: flex;
