@@ -5,6 +5,10 @@
         The chat window dominates the center of the screen with rounded edges and a slight drop shadow for depth.
 </p>
 
+## Deployment
+- The current version is also deployed using vercel for testing and various other purposes.
+[llama3chat](https://llama3chat.vercel.app/)
+
 <h2>Features</h2>
     <ul>
         <li>Full-screen, responsive design</li>
