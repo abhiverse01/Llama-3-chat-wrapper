@@ -9,16 +9,26 @@ export default function Home() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await fetch('/api/inference', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ inputs: input }),
-        });
-        const data = await res.json();
-        setResponse([...response, { user: input, bot: data }]);
-        setInput('');
+        console.log('Sending request to API...');
+        try {
+            const res = await fetch('YOUR_API_ENDPOINT_URL', {  // Replace with your actual API endpoint
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ inputs: input }),
+            });
+            console.log('Request sent, awaiting response...');
+            if (!res.ok) {
+                throw new Error(`HTTP error! Status: ${res.status}`);
+            }
+            const data = await res.json();
+            console.log('Received response:', data);
+            setResponse([...response, { user: input, bot: data }]);
+            setInput('');
+        } catch (error) {
+            console.error('Error calling API:', error);
+        }
     };
 
     const toggleDarkMode = () => {
@@ -41,7 +51,7 @@ export default function Home() {
             </div>
             <div className="main-chat">
                 <header className="chat-header">
-                    <h1><img src="/path/to/logo.png" alt="Logo" />Llama3-chat</h1>
+                    <h1><img src="/path/to/logo.png" alt="Logo" /> Chatbot</h1>
                     <div className="icons">
                         <FaCog className="icon-settings" />
                         <FaBell className="icon-notifications" />
