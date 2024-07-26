@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaCog, FaBell, FaSun, FaMoon } from 'react-icons/fa';
+import { FaCog, FaBell, FaSun, FaMoon, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 export default function Home() {
     const [input, setInput] = useState('');
@@ -41,7 +41,7 @@ export default function Home() {
             </div>
             <div className="main-chat">
                 <header className="chat-header">
-                    <h1><img src="/path/to/logo.png" alt="Logo" /> Chatbot</h1>
+                    <h1><img src="/path/to/logo.png" alt="Logo" />Llama3-Chat</h1>
                     <div className="icons">
                         <FaCog className="icon-settings" />
                         <FaBell className="icon-notifications" />
