@@ -164,4 +164,3 @@ cython_debug/
 .env
 node_modules/
 .next/
-public/styles/main.css
