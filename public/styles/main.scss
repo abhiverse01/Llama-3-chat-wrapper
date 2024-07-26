@@ -7,6 +7,7 @@ $primary-color: #333;
 $secondary-color: #007bff;
 $background-color: #f4f4f9;
 $border-radius: 8px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 // Reset and base styles
 * {
@@ -23,6 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 // Chat wrapper
@@ -32,9 +34,18 @@ body {
     max-width: 1200px;
     height: 90vh;
     background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: $box-shadow;
     border-radius: $border-radius;
     overflow: hidden;
+    transition: all 0.3s ease;
+
+    &.collapsed .side-panel {
+        width: 60px;
+
+        .collapse-button {
+            transform: rotate(180deg);
+        }
+    }
 }
 
 // Side panel
@@ -45,10 +56,11 @@ body {
     flex-direction: column;
     padding: 20px;
     border-right: 1px solid #ddd;
-    
+    transition: width 0.3s ease;
+
     .side-panel-content {
         flex: 1;
-        
+
         h2 {
             font-size: 1.2rem;
             margin-bottom: 20px;
@@ -61,6 +73,7 @@ body {
             padding: 10px;
             border-radius: $border-radius;
             cursor: pointer;
+            transition: transform 0.3s ease;
         }
     }
 }
@@ -84,10 +97,18 @@ body {
         }
 
         .icons {
-            i {
+            display: flex;
+
+            .icon-settings,
+            .icon-notifications {
                 font-size: 1.5rem;
                 margin-left: 15px;
                 cursor: pointer;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $secondary-color;
+                }
             }
         }
     }
@@ -97,12 +118,17 @@ body {
         display: flex;
         flex-direction: column;
         padding: 20px;
+        background: $background-color;
 
         .chat-box {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            background: #fff;
+            padding: 20px;
 
             .chat-response {
                 flex: 1;
@@ -110,6 +136,10 @@ body {
                 padding: 10px;
                 background: $background-color;
                 border-radius: $border-radius;
+
+                p {
+                    margin-bottom: 10px;
+                }
             }
 
             .chat-form {
@@ -135,6 +165,11 @@ body {
                     color: white;
                     cursor: pointer;
                     font-family: $font-stack;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: darken($secondary-color, 10%);
+                    }
                 }
             }
         }

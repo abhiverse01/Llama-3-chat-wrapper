@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { FaCog, FaBell } from 'react-icons/fa';
 
 export default function Home() {
     const [input, setInput] = useState('');
     const [response, setResponse] = useState([]);
+    const [isCollapsed, setIsCollapsed] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -19,19 +21,19 @@ export default function Home() {
     };
 
     return (
-        <div className="chat-wrapper">
+        <div className={`chat-wrapper ${isCollapsed ? 'collapsed' : ''}`}>
             <div className="side-panel">
                 <div className="side-panel-content">
                     <h2>Navigation</h2>
-                    <button className="collapse-button">Collapse</button>
+                    <button className="collapse-button" onClick={() => setIsCollapsed(!isCollapsed)}>Collapse</button>
                 </div>
             </div>
             <div className="main-chat">
                 <header className="chat-header">
                     <h1>Chatbot</h1>
                     <div className="icons">
-                        <i className="icon-settings">⚙️</i>
-                        <i className="icon-notifications">🔔</i>
+                        <FaCog className="icon-settings" />
+                        <FaBell className="icon-notifications" />
                     </div>
                 </header>
                 <div className="chat-container">
