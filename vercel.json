@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "api/inference.py",
+            "use": "@vercel/python"
+        },
+        {
+            "src": "pages/index.js",
+            "use": "@vercel/next"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/inference",
+            "dest": "/api/inference.py"
+        }
+    ]
+}
